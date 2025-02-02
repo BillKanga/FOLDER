@@ -3,25 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To the GOAT Brother 💪🏾❤️</title>
+    <title>To my Loving Wife😁❤️</title>
     <style>
-        @keyframes beat {
-            0%, 100% {
-                transform: scale(1);
+        body {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            background: url('https://www.transparenttextures.com/patterns/flowers.png'), linear-gradient(to right, #ff007f, #e74c3c, #9b59b6);
+            background-size: cover;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .container {
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 600px;
+            animation: fadeIn 1s ease-out;
+        }
+        h1 {
+            color: #ff007f;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            animation: slideInUp 1s ease-out;
+        }
+        button {
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #c0392b;
+        }
+        #valentineMessage {
+            margin-top: 20px;
+            animation: fadeIn 1s ease-out;
+            display: none;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
             }
-            50% {
-                transform: scale(1.2);
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
             }
         }
     </style>
 </head>
-<body style="background-color: Red; color: white; font-family: Arial, sans-serif; text-align: center; padding: 50px;">
-    <div style="background-color: white; border: 5px solid red; border-radius: 15px; padding: 20px; display: inline-block;">
-        <h1 style="color: red;">Happy Birthday, BRUV‼️</h1>
-        <p style="color: Blue; font-size: 20px;">
-            <b>Happy Birthday Bruv, Much love to you my brother i hope on you grow older and wiser than ever, as a small brother, I couldn't be more proud of you..To many more years together and more sucess. HAPPY BIRTHDAY BROTHER 💪🏾.<b>
+<body>
+    <div class="container">
+        <h1>Hello BABYYY(My very sexy, beautiful, amazing, HOT, and pretty wife)😘</h1>
+        <h1>Words can't express how much you mean to me, I hope that I do show you how much I love you because you make me so happy, I hope that I do show you how happy I am to call you mine</h1>
+        <h1>Will you make me the happiest Boyfriend/Husband ever and be my Valentine? 😁</h1>
+        <div class="btn-container">
+            <button type="button" onclick="checkAnswer()">Yes😙</button>
+            <button type="button" onclick="moveNoButton()">No😔</button>
+        </div>
+        <div id="valentineMessage"></div>
+    </div>
 
-  <img src="https://firebasestorage.googleapis.com/v0/b/spam-banksjhj.appspot.com/o/images%2Fdf4e7428-c329-4940-ae27-f52ac88f880f?alt=media&token=e0f1b2aa-9d75-4563-b39e-32656204028b" alt="Description of Image">
-            
+    <script>
+        var consecutivePresses = 0;
 
-            
+        function checkAnswer() {
+            consecutivePresses++;
+
+            if (consecutivePresses === 5) {
+                document.getElementById('valentineMessage').innerHTML = "WRONG ANSWER TRY AGAIN ;)";
+                document.getElementById('valentineMessage').style.display = 'block';
+                consecutivePresses = 0; // Reset the counter
+            } else {
+                showMessage();
+            }
+        }
+
+        function showMessage() {
+            document.getElementById('valentineMessage').innerHTML = `
+                <p>I love you very much my wife❤️❤️ and I can't wait to spend more time together, just me and you in our small bubble together❤️❤️</p>
+                <p>We aren't perfect and our relationship isn't either but I love you❤️ and I love us very very much❤️❤️ and when we celebrate our first Valentine's together, I want you to know that I'm here for you, my baby, and I can't wait for more together😙😙❤️❤️</p>
+                <p>YOU DESERVE THE WORLD BABY, I hope you like this,my smart wife😁❤️</p>
+            `;
+
+            document.getElementById('valentineMessage').style.display = 'block';
+        }
+
+        function moveNoButton() {
+            var noButton = document.querySelector('.btn-container button:last-child');
+            var randomX = Math.floor(Math.random() * 100) - 50; // Increase randomness
+            var randomY = Math.floor(Math.random() * 100) - 50; 
+
+            noButton.style.transform = `translate(${randomX}px, ${randomY}px)`;
+            consecutivePresses = 0; // Reset the counter when No button is pressed
+        }
+    </script>
+</body>
+</html>
